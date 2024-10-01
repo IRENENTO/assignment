@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASSIGNMENT 1</title>
+  <style>
+    body{
+      scroll-behavior: smooth; /*Back to top smooth scrolling*/
+      font-family: sans-serif;
+      background: black;
+    }
+    /* Ensure the body and html take the full height of the viewport */
+html, body {
+  
+  padding: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+.main{
+  border: 2px solid black;
+  background: white;
+}
+
+/* Container for the video background */
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide anything that overflows the container */
+}
+
+/* Style for the video element */
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%; /* Cover the container */
+  min-height: 100%; /* Cover the container */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Send video to the background */
+}
+
+/* Style for content over the video */
+.video-background .content {
+  position: relative;
+  z-index: 1; /* Place content above the video */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+h1, p {
+  margin: 0;
+}
+
+  </style>
+</head>
+<body style="margin-left: 15%; margin-right: 5%;">
+  <div class="main">
+   <header style="text-align: center; background-color: darkblue; color: white; height: 50px;">
+    <h1>ASSIGNMENT 1</h1>
+   </header> 
+  <h3 id="top">1) What is HTML and what does it stand for?</h1>
+  <p> HTML is the standard markup language for creating Web pages.</p>
+  <h3>2) What is the difference between HTML and XHTML?
+  </h3>
+  <p> HTML is the standard markup language for creating Web pages.</p>
+  <p><b>HTML</b> is the traditional markup language for structuring web content with more flexible syntax rules and lenient error handling.
+    <br><b>XHTML</b> reformulates HTML as XML, enforcing stricter syntax rules and error handling to ensure well-formed documents.</p>
+    <h3>3) What are the basic building blocks of an HTML document?
+    </h3>
+    <ul>
+      <li>Tags</li>
+      <li>Attributes</li>
+      <li>Elements</li>
+    </ul>
+    <h3>4) How do you create a hyperlink in HTML?</h3>
+      <a href="https://www.google.com">This is a link to google.com</a>
+    <h3>5) What is the purpose of the "alt" attribute in the HTML "img" tag?</h3>
+    <ul>
+      <li>Provides a textual description of the image for users who cannot see it. This is crucial for people with visual impairments who use screen readers to browse the web.</li>
+      <li>
+        Search engines use the alt attribute to understand the content of images. Descriptive alt text can help improve a page’s search engine ranking by making the content of the image searchable and relevant to the page’s context.
+      </li>
+      <li>
+        When an image fails to load (due to broken links, slow connections, etc.), the alt text is displayed in place of the image, providing context to the user.
+      </li>
+    </ul>
+    <h3>6) How can you create a table in HTML?</h3>
+    <table border="1">
+      <tr>
+        <th>This is a table header for column 1</th>
+        <th>This is table header for column 2</th>
+      </tr>
+      <tr>
+        <td>This is the cell</td>
+        <td>This is another cell</td>
+      </tr>
+      <tr>
+        <td>This is another cell</td>
+        <td>This is another cell</td>
+      </tr>
+    </table>
+    <h3>7) What is the purpose of the "doctype" declaration in HTML?</h3>
+    <p> The <!DOCTYPE> declaration tells the web browser which version of HTML is being used in the document.</p>
+    <h3>8) What is the difference between HTML elements and HTML tags?
+    </h3>
+    <p>
+      <b>HTML tags</b> are the fundamental building blocks of HTML that are used to create and define elements within a web page. They are the markup used to instruct the browser how to display the content.
+      <b>HTML elements</b> are the complete set of tags and the content they enclose. An element includes both the start tag, the content, and the end tag.
+    </p>
+    <h3>
+      9) How do you add comments in HTML?
+    </h3>
+    <p>&lt;!-- We put comments inside this tag --&gt;</p>
+    <h3>10) What is the significance of the "head" section in an HTML document?</h3>
+    <p>The &lt;head&gt; section is vital for:</p>
+    <ul>
+      <li>Providing metadata and document information.</li>
+      <li>Defining the document title.</li>
+      <li>Linking to external stylesheets, scripts, and resources.</li>
+      <li>Setting up viewport and responsive design.</li>
+      <li>Adding other meta-information that affects how the page is displayed and indexed.</li>
+    </ul>
+    <h3>
+      11) How do you define headings in HTML?
+    </h3>
+    <h1>This is a heading</h1>
+    <h2>This is a heading</h2>
+    <h3>This is a heading</h3>
+    <h4>This is a heading</h4>
+    <h5>This is a heading</h5>
+    <h6>This is a heading</h6>
+    <h3>12) What is the role of the "title" element in HTML?</h3>
+    <p>The &lt;title&gt; element is essential for defining the title of a web page, influencing how it is presented in browser tabs, search engine results, and bookmarks.</p>
+    <h3>
+      13) How do you create an ordered list in HTML?
+    </h3>
+    <ol>
+      <li>This is ordered list</li>
+      <li>This is ordered list</li>
+      <li>This is ordered list</li>
+      <li>This is ordered list</li>
+      <li>This is ordered list</li>
+    </ol>
+    <h3>
+      14) What are the different types of form elements in HTML?
+    </h3>
+    <fieldset>
+      <legend>Text type</legend>
+      <label>Enter Names: </label>
+      <input type="text">
+    </fieldset>
+    <fieldset>
+      <legend>Password type</legend>
+      <label>Enter Password: </label>
+      <input type="password">
+    </fieldset>
+    <fieldset>
+      <legend>Email type</legend>
+      <label>Enter Email: </label>
+      <input type="email">
+    </fieldset>
+    <fieldset>
+      <legend>Radio type</legend>
+      <input type="radio" name="sex">
+      <label>Male</label>
+      <input type="radio" name="sex">
+      <label>FeMale</label>
+    </fieldset>
+    <fieldset>
+      <legend>File type</legend>
+      <label>Upload file: </label>
+      <input type="file">
+    </fieldset>
+    <fieldset>
+      <legend>Color type</legend>
+      <label>Select Color: </label>
+      <input type="color">
+    </fieldset>
+    <fieldset>
+      <legend>Submit type</legend>
+      <label>Click to submit: </label>
+      <input type="submit">
+    </fieldset>
+    <h3>15) How do you embed an image in an HTML document?</h3>
+    <img src="C:\Users\BLACK'O\Desktop\assignment one\b (6).jpg" alt="avatar" width="200px">
+    <h3>
+      16) What is the purpose of the "href" attribute in an anchor tag?
+    </h3>
+    <p>It is used for setting the link which will be opened when element clicked</p>
+    <h3>
+      17) How do you create a line break in HTML?
+    </h3>
+    <p>
+      By using &lt;br&gt; element.<br>
+      For starting this sentence on a newline i used the above element
+    </p>
+    <h3>
+      18) What is the purpose of the "target" attribute in an anchor tag?
+    </h3>
+    <p>
+      target attribute is used for specifying where the link opens either in current tab or new tab.
+    </p>
+    <h3>
+      19) What is the difference between block-level and inline elements in HTML?
+    </h3>
+    <p>
+      <b>Block-level</b> elements always starts on a new line, and the browsers automatically add some space (a margin) before and after the element. <br>
+      <b>An inline element</b> does not start on a new line.
+    </p>
+    <h3>
+      20) How do you create a horizontal rule in HTML?
+    </h3>
+    <hr>
+    <h3>
+      21) What is the role of the "span" element in HTML?
+    </h3>
+    <p>
+      The &lt;span&gt; element in HTML is a versatile, inline container that is used to group and apply styles or manipulate a segment of text or other inline content.
+    </p>
+    <h3>
+      22) How do you create a checkbox in HTML?
+    </h3>
+    <label>This is a checkbox </label>
+    <input type="checkbox">
+    <h3>
+      23) What is the purpose of the "src" attribute in the "script" tag?
+    </h3>
+    <p>Is used for specifying the location of the javascript file to link with the html document.</p>
+    <h3>
+      24) How do you create a dropdown menu in HTML?
+    </h3>
+    <label>Dropdown menu: </label>
+    <select>
+      <option>...Please select...</option>
+      <option>option 1</option>
+      <option>option 2</option>
+      <option>option 3</option>
+      <option>option 4</option>
+      <option>option 5</option>
+    </select>
+    <h3>
+      25) What is the purpose of the "colspan" attribute in an HTML table?
+    </h3>
+    <p>
+      Colspan is used for merging 2 or more columns
+    </p>
+    <table border="1">
+      <tr>
+        <td colspan="2">2 merged columns</td>
+        <td>single column</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+    </table>
+    <h3>
+      26) How do you add a background image to an HTML element?
+    </h3>
+    <p>By using the (background-image) css property on the body element.  I used it in setting this page's background</p>
+    <h3>
+      27) What is the purpose of the "action" attribute in an HTML form?
+    </h3>
+    <p>
+      The "action" attribute in an HTML form specifies the URL where the form's data should be sent when the form is submitted.
+    </p>
+    <h3>
+      28) How do you add a video to an HTML document?
+    </h3>
+    <video src="C:\Users\BLACK'O\Desktop\assignment one\How_to_Make_a_Double_Exposure_Effect_in_Adobe_Photoshop_CC_2021(480p).mp4" width="400px" controls>
+      video file not supported
+    </video>
+    <h3>
+      29) What is the purpose of the "disabled" attribute in an input field?
+    </h3>
+    <p>When an input field is disabled: </p>
+    <ol>
+      <li><b>User Interaction:</b> Users cannot click on or type into the field.</li>
+      <li><b>Submission:</b> The field's value is not included when the form is submitted, meaning it does not get sent to the server.</li>
+      <li><b>Visual Appearance:</b>Visual Appearance: Disabled fields typically have a different visual style, such as a greyed-out appearance, to indicate that they are inactive.</li>
+    </ol>
+    <label>Disabled input: </label>
+    <input type="text" disabled>
+    <h3>
+      30) How do you create a form in HTML?
+    </h3>
+    <form style="border: 1px solid blue; text-align: center;">
+      <label>Enter First Name:</label><br>
+      <input type="text" name="fname" required><br>
+      <label>Enter Last Name:</label><br>
+      <input type="text" name="lname" required><br>
+      <label>Enter Password:</label><br>
+      <input type="password" name="password"><br><br>
+      <input type="submit">
+    </form>
+    <h3>
+      31) What is the purpose of the "placeholder" attribute in an input field?
+    </h3>
+    <p>The placeholder attribute in an input field provides a hint or example of what kind of information should be entered into the field.</p>
+    <input type="text" placeholder="This is a placeholder">
+    <h3>
+      32) How do you create a hyperlink with an image in HTML?
+    </h3>
+    <a href="https://www.instagram.com/irenento"><img src="C:\Users\BLACK'O\Desktop\assignment one\b (6).jpg" alt="This is an image link" width="200px"></a>
+    <h3>
+      33) What is the purpose of the "required" attribute in an input field?
+    </h3>
+    <p>
+      The required attribute in an input field indicates that the field must be filled out before the form can be submitted.
+    </p>
+    <h3>
+      34) How do you create a responsive layout in HTML?
+    </h3>
+    <p>Include the viewport meta tag in the 'head' section of your HTML to control the layout on mobile browsers:
+      <br><b> &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</b>
+    </p>
+    <h3>
+      35) What is the purpose of the "charset" attribute in the "meta" tag?
+    </h3>
+    <p>
+      The charset attribute in the 'meta' tag specifies the character encoding for the HTML document. Character encoding determines how characters are represented in bytes and is crucial for correctly displaying text on a web page.
+    </p>
+    <h3>
+      36) What is the purpose of the "autocomplete" attribute in an input field?
+    </h3>
+    <p>
+      The autocomplete attribute in an input field is used to control the browser's auto-fill behavior. It helps users by suggesting or automatically filling in values based on previously entered data or saved information.
+    </p>
+    <ul>
+      <li>autocomplete="name": For full names.</li>
+      <li>autocomplete="email": For email addresses.</li>
+      <li>autocomplete="address-line1": For the first line of an address.</li>
+      <li>autocomplete="off": Disabling autocomplete</li>
+    </ul>
+    <h3>
+      37) How do you create a button in HTML?
+    </h3>
+    <button>Click me</button>
+    <h3>
+      38) What is the purpose of the "nowrap" attribute in an HTML table?
+    </h3>
+    <p>
+      The nowrap attribute was used in HTML to prevent text in a table cell from wrapping to the next line. When applied, it would ensure that the text stays on a single line, extending the width of the cell if necessary.
+    </p>
+    <h3>
+      39) How do you create a responsive image in HTML?
+    </h3>
+    <p>
+      <ul>
+        <li>max-width: 100%: Ensures the image can scale down to fit within its container but will not scale up beyond its original size.</li>
+        <li>height: auto: Keeps the image’s aspect ratio intact.</li>
+      </ul>
+    </p>
+    <h3>
+      42) What is the purpose of the "target" attribute in an anchor tag?
+    </h3>
+    <p>Check question number 18.</p>
+    <h3>
+      41) How do you create a button in HTML?
+    </h3>
+    <p>Check question number 37.</p>
+    <h3>
+      42) What is the purpose of the "target" attribute in an anchor tag?
+    </h3>
+    <p>CHeck question number 18.</p>
+    <h3>
+      43) What is the purpose of the "placeholder" attribute in a textarea?
+    </h3>
+    <p>
+      The placeholder attribute in a 'textarea' provides a hint or example of what kind of content is expected in the field.
+    </p>
+    <textarea placeholder="This is a placeholder"></textarea>
+    <h3>
+      44) What is the purpose of the "readonly" attribute in an input field?
+    </h3>
+    <p>
+      The readonly attribute in an input field is used to make the field's content non-editable by users while still allowing it to be visible.
+    </p>
+    <input type="text" value="Itanga" readonly>
+    <h3>
+      45) How do you create a responsive video in HTML?
+    </h3>
+    <p>To create a responsive video in html you have to set width to a percentage value either 100% or other like 50%</p>
+    <video src="How_to_Make_a_Double_Exposure_Effect_in_Adobe_Photoshop_CC_2021(480p).mp4" width="50%" controls>Video not supported</video>
+    <h3>
+      46) media queries to modify the video size or aspect ratio for different screen resolutions or
+      device orientations, ensuring a responsive video display.      
+    </h3>
+    <p>
+      ????????
+    </p>
+    <h3>
+      47) How do you embed audio in an HTML document?
+    </h3>
+    <audio src="audio.mp3" controls>audio not supported</audio>
+    <h3>
+      48) Advanced HTML Interview Questions and Answers
+    </h3>
+    <p>??????</p>
+    <h3>
+      49) What is the purpose of the "span" element in HTML?
+    </h3>
+    <p>
+      the &lt;span&gt; element is a flexible tool for applying styles and scripts to parts of text or other inline elements, allowing for fine-grained control over the presentation and behavior of content within a webpage.
+    </p>
+    <span>This is a text inside span.</span>
+    <h3>
+      50) What is the purpose of the "required" attribute in a form element?
+    </h3>
+    <p>check question number 33.</p>
+    <h3>
+      51) How do you create a checkbox in HTML?
+    </h3>
+    <input type="checkbox">
+    <h3>
+      52) What is the purpose of the "cols" and "rows" attributes in the "textarea" tag?
+    </h3>
+    <p>
+      The cols and rows attributes in the &lt;textarea&gt; tag are used to control the dimensions of the text area input field in an HTML form. They specify the width and height of the text area in terms of character columns and text rows, respectively.
+    </p>
+    <h3>
+      53) What is the purpose of the "scope" attribute in an HTML table?
+    </h3>
+    <p>
+      The scope attribute in an HTML table is used to define the relationship between header cells and data cells within a table. It helps to improve the accessibility of tables by specifying the scope of the header cells for assistive technologies, such as screen readers.
+    </p>
+    <h3>
+      54) What is the purpose of the "rel" attribute in the "link" tag?
+    </h3>
+    <p>The rel attribute in the 'link' tag specifies the relationship between the current document and the linked resource.</p>
+    <h3>
+      55) How do you create a range input slider in HTML?
+    </h3>
+    <input type="range">
+    <h3>
+      56) What is the purpose of the "disabled" attribute in an HTML element?
+    </h3>
+    <button disabled>Disabled button</button>
+    <h3>
+      57) What is the purpose of the "maxlength" attribute in an input field?
+    </h3>
+    <p>
+      The maxlength attribute in an HTML 'input' element specifies the maximum number of characters that the user is allowed to enter into the input field. 
+    </p>
+    <input type="text" maxlength="5" placeholder="maxlength=5">
+    <h3>
+      58) How do you create a numbered list in HTML?
+    </h3>
+    <ol>
+      <li>Numbered list</li>
+      <li>Numbered list</li>
+      <li>Numbered list</li>
+      <li>Numbered list</li>
+    </ol>
+    <h3>
+      59) What is the purpose of the "target" attribute in the "form" tag?
+    </h3>
+    <p>
+      The target attribute in the 'form' tag specifies where to display the response after a form is submitted. 
+    </p>
+    <h3>
+      60) How do you create a multi-line text input field in HTML?
+    </h3>
+    <p>
+      To create a multi-line text input field in HTML, you use the 'textarea' element. The 'textarea' tag allows users to input text over multiple lines and is often used for longer pieces of text such as comments, messages, or descriptions.
+    </p>
+    <h3>
+      61) What is the purpose of the "hidden" attribute in an HTML element?
+    </h3>
+    <p>
+      The hidden attribute in HTML is used to hide an element from the user. 
+    </p>
+    <h3>
+      62) How do you set the background color of an HTML element?
+    </h3>
+    <p style="background-color: yellow;">
+      To set the background color of an HTML element, you use the CSS background-color property. This property allows you to define the color that will be applied to the background of the element, affecting the area behind any content within the element.
+    </p>
+    <h3>
+      63) How do you add a border to an HTML element?
+    </h3>
+    <p style="border: 1px solid black;">
+      To add a border to an HTML element, you use the CSS border property. This property allows you to define the width, style, and color of the border surrounding an element. You can also use specific properties for more detailed control over each side of the border.
+    </p>
+    <h3>
+      64) How do you center-align text horizontally in an HTML element?
+    </h3>
+    <p style="text-align: center;">
+      horizontally center aligned text
+    </p>
+    <h3>
+      65) How do you set the font color of an HTML element?
+    </h3>
+    <p style="color: green;">
+      Font color of this paragraph is set to green.
+    </p>
+    <h3>
+      66) What is the purpose of the HTML &lt;meta&gt; tag?
+    </h3>
+    <p>
+      The HTML &lt;ta&gt; tag is used to provide metadata about an HTML document. Metadata is information about the document that isn't directly visible on the page but helps with various functions like improving search engine optimization (SEO), specifying character encoding, or setting viewport properties for responsive design.
+    </p>
+    <h3>
+      67) What is the purpose of the HTML &lt;iframe&gt; tag?
+    </h3>
+    <p>
+      The HTML &lt;iframe&gt; tag is used to embed another HTML document within the current document.
+    </p>
+    <iframe src="index.html" frameborder="0" title="Ines Ruhengeri"></iframe>
+    <h3>
+      68) What is the purpose of the HTML &lt;header&gt; tag?
+    </h3>
+    <p>
+      The HTML &lt;header&gt; tag is used to define a header section in a webpage or section of a webpage. It typically contains introductory content or navigational aids and can include elements such as headings, logos, navigation menus, and other introductory or contextual content.
+    </p>
+    <h3>
+      69) What is the purpose of the HTML &lt;aside&gt; tag?
+    </h3>
+    <p>
+      The HTML &lt;aside&gt; tag is used to define content that is tangentially related to the content around it. It typically represents a sidebar, a pull quote, or other content that is supplementary to the main content of the page.
+    </p>
+    <h3>
+      70) What is the role of the "canvas" element in HTML5?
+    </h3>
+    <p>
+      The HTML5 &lt;canvas&gt; element is a versatile feature used for drawing graphics, animations, and interactive content directly within the web page. It provides a space where you can use JavaScript to render shapes, images, and other visual elements.
+    </p>
+    <h3>
+      72) What is the role of the "datalist" element in HTML5?
+    </h3>
+    <p>
+      The HTML5 'datalist' element is used to provide a set of predefined options for an 'input' element. When used together, the 'datalist' allows users to select from a list of options or input their own values, enhancing the usability of form inputs where a predefined set of options might be helpful.
+    </p>
+    <label for="fruit">Choose a fruit:</label>
+    <input list="fruits" id="fruit" name="fruit" placeholder="Type to search...">
+    <datalist id="fruits">
+      <option value="Apple">
+      <option value="Banana">
+      <option value="Cherry">
+      <option value="Date">
+      <option value="Fig">
+      <option value="Grape">
+    </datalist>
+    <h3>
+      73) How do you center align an HTML element?
+    </h3>
+    <p style="width: 50%; margin: auto;">
+      For block-level elements like 'div, p', you can center-align them horizontally by setting their width and applying margin: auto.
+    </p>
+    <h3>
+      74) What is the role of the "mark" element in HTML5?
+    </h3>
+    <p>Lorem ipsum <mark>marked text</mark>.</p>
+    <h3>
+      75) How do you add a video background to an HTML element?
+    </h3>
+    <div class="video-background">
+      <video autoplay muted loop playsinline>
+        <source src="C:\Users\BLACK'O\Desktop\assignment one\How_to_Make_a_Double_Exposure_Effect_in_Adobe_Photoshop_CC_2021(480p).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="content">
+        <h1>Welcome to My Website</h1>
+        <p>This is a description or call to action over the video background.</p>
+      </div>
+    </div>
+    <h3>76) What is the purpose of the "formnovalidate" attribute in an HTML form?</h3>
+    <p>
+      The formnovalidate attribute in an HTML form is used to bypass the built-in validation for form inputs when the form is submitted. This attribute can be applied to a submit button (usually of type submit) within a form.
+    </p>
+    <h3>
+      77) How do you embed a Google Map in an HTML document?
+    </h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12129.267797414523!2d29.638580270110232!3d-1.506317065641699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dc5a4c0fcf499d%3A0x42b3f0e74eea2cee!2sMusanze%20Mosque!5e0!3m2!1sen!2srw!4v1726781584163!5m2!1sen!2srw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <h3>
+      78) What is the purpose of the "datetime" attribute in the "time" element?
+    </h3>
+    <p>
+      The datetime attribute in the &lt;time&gt; element is used to specify a machine-readable format for a specific time or date. This attribute helps web browsers and other software (like search engines) understand and process the date or time more effectively.
+    </p>
+    <br>
+    <br>
+    <footer style="text-align: center; background-color: darkblue; color: white; height: 50px;"><br>Done by &copy;Irene IRUMVA 2024</footer>
+  </div>
+</body>
+</html>
