@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right,#07001f, #434343, #000000);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.container {
+    display: flex;
+    flex: 1;
+}
+.nav {
+    background-color: #320738;
+    padding: 15px;
+    width: 200px;
+    color: white;
+}
+.nav ul{
+    list-style-type: circle;
+}
+.content {
+    flex: 1;
+    padding: 15px;
+}
+.left-nav {
+    order: -1; /* Move left nav to the left */
+}
+.left-nav ul{
+    list-style-type: square;
+}
+#logo{
+    width: 50px;
+    height: 50px;
+    float: left;
+    border-radius: 50%;
+}
+.l{
+    float: left;
+    margin: 12px;
+    padding: 10px;
+    margin-left: 50px;
+    width: 120px;
+    cursor: pointer;
+    border: none;
+}
+.r{
+    float: right;
+    margin: 12px;
+    padding: 10px;
+    margin-left: 50px;
+    width: 120px;
+    cursor: pointer;
+    border: none;
+}
+button{
+    background: #320738;
+    color: white;
+    border-radius: 5px;
+    transition: 2s;
+}
+button:hover{
+    background: black;
+    color: white;
+}
+#search{
+    float: right;
+    margin: 12px;
+    padding: 10px;
+    margin-left: 50px;
+    width: 200px;
+    background: transparent;
+    color: #f4f4f4;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 2px solid skyblue;
+    outline: none;
+}
+.container .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container .content img{
+    width: 30%;
+    height: 50%;
+}
+ span{
+    color: darkred;
+    text-decoration: underline;
+ }
+ .sclback {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+ }
+ .sclback th,td{
+    text-align: left;
+    padding: 8px;
+ }
+ .sclback tr:nth-child(even){
+    background-color: blue;
+    color: white;
+ }
+ .skills{
+    color: white;
+    border-collapse: collapse;
+    width: 100%;
+ }
+ .skills .skh{
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid rgb(255, 47, 220);
+
+ }
+ .skills th{
+    background-color: green;
+    color: white;
+ }
+.fa{
+    text-decoration: none;
+    color: black;
+} 
+ .checked {
+color: orange;
+
+}
